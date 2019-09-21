@@ -2,7 +2,7 @@
 
 ## MongoDB
 
-docker run -d --restart=always --name=mongo --net=host mongo:latest
+docker run -d --name=mongo --net=host mongo:latest
 
 # Test
 

@@ -2,28 +2,27 @@
 
 ## MongoDB
 
-docker run -d --restart=always --name=mongo --net=host mongo:latest
+docker run -d --name=postgres --net=host postgres:latest
 
 # Test
 
-## Create Order
+## Create Customer
 
 ~~~~
 curl -X POST \
-  http://localhost:8080/v1/orders \
+  http://localhost:8081/v1/customers \
   -H 'Content-Type: application/json' \
   -d '{
-	"customerId" : "6a7dc9bd-b837-45c9-aa8d-246e71ad98df",
-	"status" : "ACCEPTED",
-	"value" : 782
+	"name" : "Luram Archanjo",
+	"creditLimit" : 1000
 }'
 ~~~~
 
-## List Orders
+## List Customers
 
 ~~~~
 curl -X GET \
-  http://localhost:8080/v1/orders \
+  http://localhost:8081/v1/customers \
   -H 'Content-Type: application/json' \
   -H 'cache-control: no-cache'
 ~~~~
