@@ -49,3 +49,9 @@ Resilience, because if the database downs it is isolated to the context of the s
 ### Disadvantages
 
 Cost
+
+# Reference
+
+[Microservices.io]
+
+[Microservices.io]: https://microservices.io/patterns/data/database-per-service.html
