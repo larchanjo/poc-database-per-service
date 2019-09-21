@@ -15,7 +15,7 @@ class OrderResource(val orderService: OrderService) {
     @PostMapping
     fun post(@RequestBody request: OrderPostRequest): ResponseEntity<OrderResponse> {
         log.info("Receiving a POST /v1/orders")
-        val order = orderService.create(request.customerId, request.status, request.value)
+        val order = orderService.create(request.customerId, request.value)
         val response = OrderResponse(order.id, order.customerId, order.status, order.value)
         log.info("Received a POST /v1/orders")
 
