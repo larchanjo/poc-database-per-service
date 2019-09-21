@@ -1,6 +1,6 @@
 # Setup
 
-## MongoDB
+## Postgres
 
 docker run -d --name=postgres --net=host postgres:latest
 
